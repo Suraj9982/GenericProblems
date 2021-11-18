@@ -26,5 +26,41 @@ namespace GenericProblemsComputation
                 return thirdnumber;
             }
         }
+        public static double FindMax(double firstnumber, double secondnumber, double thirdnumber)
+        {
+            if (firstnumber.CompareTo(secondnumber) > 0 && firstnumber.CompareTo(thirdnumber) > 0)
+            {
+                Console.WriteLine("maximum = " + firstnumber);
+                return firstnumber;
+            }
+            if (secondnumber.CompareTo(firstnumber) > 0 && secondnumber.CompareTo(thirdnumber) > 0)
+            {
+                Console.WriteLine("maximum = " + secondnumber);
+                return secondnumber;
+            }
+            else
+            {
+                Console.WriteLine("maximum = " + thirdnumber);
+                return thirdnumber;
+            }
+        }
+        public static string FindMax(string firstnumber, string secondnumber, string thirdnumber)
+        {
+            if (firstnumber.CompareTo(secondnumber) > 0 && firstnumber.CompareTo(thirdnumber) > 0)
+            {
+                Console.WriteLine("maximum = " + firstnumber);
+                return firstnumber;
+            }
+            if (secondnumber.CompareTo(firstnumber) > 0 && secondnumber.CompareTo(thirdnumber) > 0)
+            {
+                Console.WriteLine("maximum = " + secondnumber);
+                return secondnumber;
+            }
+            else
+            {
+                Console.WriteLine("maximum = " + thirdnumber);
+                return thirdnumber;
+            }
+        }
     }
 }
