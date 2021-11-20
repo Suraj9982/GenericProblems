@@ -6,12 +6,12 @@ namespace GenericProblemsComputation
     {
         static void Main(string[] args)
         {
-            
+
             Console.WriteLine("WELCOME TO GENERIC PROBLEMS");
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("CHOOSE YOUR OPTION\n1.find maximum integer\n2.Find maximum floatnumber\n3.find maximum string\n4.Exit");
+                Console.WriteLine("CHOOSE YOUR OPTION\n1.find maximum integer\n2.Find maximum floatnumber\n3.find maximum string\n4.Generic Method To FindMax\n5.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -37,10 +37,15 @@ namespace GenericProblemsComputation
                         GenericSolution.FindMax(firstname, secondname, thirdname);
                         break;
                     case 4:
+                        GenericSolution.GenericRefactor<int>.FindMaximum(2, 3, 1);
+                        GenericSolution.GenericRefactor<double>.FindMaximum(2.0, 3.0, 1.0);
+                        GenericSolution.GenericRefactor<string>.FindMaximum("suraj", "aman", "gyanendra");
+                        break;
+                    case 5:
                         flag = false;
                         break;
                     default:
-                        Console.WriteLine("your choice should be between 1 to 3");
+                        Console.WriteLine("your choice should be between 1 to 5");
                         break;
                 }
             }

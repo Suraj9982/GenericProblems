@@ -15,7 +15,7 @@ namespace GenericProblemsComputation
                 Console.WriteLine("maximum = " + firstname);
                 return firstname;
             }
-            if (secondname.CompareTo(firstname) >0 && secondname.CompareTo(thirdname) > 0)
+            if (secondname.CompareTo(firstname) > 0 && secondname.CompareTo(thirdname) > 0)
             {
                 Console.WriteLine("maximum = " + secondname);
                 return secondname;
@@ -62,6 +62,27 @@ namespace GenericProblemsComputation
             {
                 Console.WriteLine("maximum = " + thirdnumber);
                 return thirdnumber;
+            }
+        }
+        internal class GenericRefactor<T> where T: IComparable
+        {
+            public static T FindMaximum(T firstnum, T secondnum, T thirdnum)
+            {
+                if (firstnum.CompareTo(secondnum) > 0 && firstnum.CompareTo(secondnum) > 0)
+                {
+                    Console.WriteLine("maximum = " + firstnum);
+                    return thirdnum;
+                }
+                if (secondnum.CompareTo(firstnum) > 0 && secondnum.CompareTo(thirdnum) > 0)
+                {
+                    Console.WriteLine("maximum = " + secondnum);
+                    return secondnum;
+                }
+                else
+                {
+                    Console.WriteLine("maximum = " + thirdnum);
+                    return thirdnum;
+                }
             }
         }
     }
